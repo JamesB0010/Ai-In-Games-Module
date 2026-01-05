@@ -10,7 +10,7 @@
   <p align="center">
     A game created to explore different ways to implement AI
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=JiV5LY8_V9s">View video submission</a>
   </p>
 </div>
 
