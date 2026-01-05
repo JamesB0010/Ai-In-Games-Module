@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/USS/GlobalFlockMaster.uss?fileID=7433441132597879392&amp;guid=1255edd219a36d94f8b422007608372f&amp;type=3#GlobalFlockMaster" />
+    <uie:ObjectField label="Script" binding-path="m_Script" name="m_Script" />
+    <uie:ObjectField label="Player Transform" binding-path="player" />
+    <ui:EnumField label="Thread Mode" type="FlockMaster+FlockThreadMode, Assembly-CSharp" binding-path="flockThreadMode" name="flockThreadMode" />
+    <ui:Label tabindex="-1" text="Flock Global Settings And Dependencies:" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsLabel" />
+    <uie:PropertyField binding-path="singleThreadGlobalFlock" name="oldGlobalFlock" />
+    <uie:PropertyField binding-path="multiThreadedGlobalFlock" name="globalFlock" />
+</ui:UXML>

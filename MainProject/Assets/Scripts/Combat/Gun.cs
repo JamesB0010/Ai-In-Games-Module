@@ -1,0 +1,81 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+[CreateAssetMenu]
+public class Gun : ScriptableObject
+{
+    [SerializeField]
+    private Bullet bulletPrefab;
+
+    [SerializeField]
+    private AudioClip gunshotSound;
+
+    private float lastBulletShotTimestamp = -100.0f;
+
+    [SerializeField]
+    private float timeBetweenBullets;
+
+
+    public void PrimeWeaponToShoot()
+    {
+        this.lastBulletShotTimestamp = -100.0f;
+    }
+    public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, RaycastHit hit)
+    {
+        if (this.IsPrimedToShoot())
+        {
+            Bullet bullet = InstantiateBullet(bulletStartPosition, targetPosition, hasValidTarget);
+            bullet.hit = hit;
+            return true;
+        }
+        return false;
+    }
+    public bool Shoot(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
+    {
+        if (this.IsPrimedToShoot())
+        {
+            this.InstantiateBullet(bulletStartPosition, targetPosition, hasValidTarget);
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool IsPrimedToShoot()
+    {
+        bool requiredTimeElapsed = Time.timeSinceLevelLoad - lastBulletShotTimestamp > timeBetweenBullets;
+        return requiredTimeElapsed;
+    }
+
+    private Bullet InstantiateBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget)
+    {
+        this.UpdateLastBulletShotTimestamp();
+
+        Bullet bullet = Instantiate(this.bulletPrefab, bulletStartPosition, Quaternion.identity);
+
+        SetupBullet(bulletStartPosition, targetPosition, hasValidTarget, bullet);
+
+        PlayBulletShotSound(bulletStartPosition);
+        return bullet;
+    }
+    private void UpdateLastBulletShotTimestamp()
+    {
+        this.lastBulletShotTimestamp = Time.timeSinceLevelLoad;
+    }
+    private static void SetupBullet(Vector3 bulletStartPosition, Vector3 targetPosition, bool hasValidTarget, Bullet bullet)
+    {
+        bullet.SetupBulletData(hasValidTarget, bulletStartPosition, targetPosition);
+    }
+
+    private void PlayBulletShotSound(Vector3 bulletStartPosition)
+    {
+        AudioSource.PlayClipAtPoint(this.gunshotSound, bulletStartPosition);
+    }
+
+
+
+
+}

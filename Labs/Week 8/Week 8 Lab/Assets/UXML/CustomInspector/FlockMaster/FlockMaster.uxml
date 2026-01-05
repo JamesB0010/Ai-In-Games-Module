@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:ObjectField label="Script" binding-path="m_Script" name="m_Script" />
+    <ui:EnumField label="Thread Mode" type="FlockMaster+FlockThreadMode, Assembly-CSharp" binding-path="flockThreadMode" name="flockThreadMode" />
+    <uie:PropertyField binding-path="old_GlobalFlock" label="old GlobalFlock" name="oldGlobalFlock" />
+    <uie:PropertyField binding-path="globalFlock" label="Global Flock" name="globalFlock" />
+</ui:UXML>

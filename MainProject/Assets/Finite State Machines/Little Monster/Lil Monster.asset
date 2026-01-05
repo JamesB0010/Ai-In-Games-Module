@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5b20f59a6eab44490504ee8e1cb69f, type: 3}
+  m_Name: Lil Monster
+  m_EditorClassIdentifier: 
+  entryState: {fileID: 6860595146245248816}
+  states:
+  - {fileID: 6860595146245248816}
+  - {fileID: 4930022219021430724}
+  - {fileID: 5414078628301928567}
+  - {fileID: 7450982805100223806}
+  - {fileID: 6581086851688196492}
+--- !u!114 &4930022219021430724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Waiting to be fed
+  m_EditorClassIdentifier: 
+  guid: c36aec5105ca8fb4b96789dbcd2762e1
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 7.9999347, y: 240.77176}
+  description: The monster will wait with its mouth open until it has food inside
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 5414078628301928567}
+      transitionHandleMethod: 3
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 8061473052596109316
+  references:
+    version: 2
+    RefIds:
+    - rid: 8061473052596109316
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+--- !u!114 &5414078628301928567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Chewing
+  m_EditorClassIdentifier: 
+  guid: 8bf278b3878d3394ab7d059183f7f352
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 18.710033, y: 451.40576}
+  description: The monster will chew up the food in their mouth
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 7450982805100223806}
+      transitionHandleMethod: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 8061473052596109317
+    - stateTo: {fileID: 6581086851688196492}
+      transitionHandleMethod: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 8061473052596109318
+  references:
+    version: 2
+    RefIds:
+    - rid: 8061473052596109317
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+    - rid: 8061473052596109318
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+--- !u!114 &6581086851688196492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Angry
+  m_EditorClassIdentifier: 
+  guid: e34e300c654777e4983b9c15e98eb2a6
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 182.39998, y: 657.5999}
+  description: The monster is angry with what they were fed do a little animation
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 4930022219021430724}
+      transitionHandleMethod: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 8061473052596109319
+  references:
+    version: 2
+    RefIds:
+    - rid: 8061473052596109319
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+--- !u!114 &6860595146245248816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b956724ac8457c4e8a00fe78ce44508, type: 3}
+  m_Name: Entry State
+  m_EditorClassIdentifier: 
+  guid: c044c64a058267444bbb11b50c46c463
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 0, y: 0}
+  description: This state is the entry of the FSM. It has 1 connection and will automatically
+    transition to that connection
+  stateConnection:
+    stateTo: {fileID: 4930022219021430724}
+    transitionHandleMethod: 0
+    AgentPrefab: {fileID: 0}
+    transitionConditions:
+    - rid: 8061473052596109315
+  references:
+    version: 2
+    RefIds:
+    - rid: 8061473052596109315
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+--- !u!114 &7450982805100223806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Happy
+  m_EditorClassIdentifier: 
+  guid: ada7cd55f3ff25048b9b46b8f672eaa2
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: -134.4, y: 649.9984}
+  description: The monster is happy with what they were fed do a little animation
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 4930022219021430724}
+      transitionHandleMethod: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 8061473052596109320
+  references:
+    version: 2
+    RefIds:
+    - rid: 8061473052596109320
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0

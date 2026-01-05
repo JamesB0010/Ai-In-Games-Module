@@ -1,0 +1,7 @@
+#SettingsLabel {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom-width: 3px;
+    border-top-width: 15px;
+    font-size: 15px;
+    -unity-font-style: bold;
+}

@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-450481727865363042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b956724ac8457c4e8a00fe78ce44508, type: 3}
+  m_Name: Entry State
+  m_EditorClassIdentifier: 
+  guid: 3a24e6f63085aa141a94121c985df946
+  graphEditorPosition: {x: -176, y: 54.99202}
+  stateName: Entry State
+  description: This state is the entry of the FSM. It has 1 connection and will automatically
+    transition to that connection
+  stateConnection:
+    stateTo: {fileID: 6009228169915600080}
+    transitionHandledByAgent: 0
+    transitionConditions: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5b20f59a6eab44490504ee8e1cb69f, type: 3}
+  m_Name: LittleCubeExample
+  m_EditorClassIdentifier: 
+  entryState: {fileID: -450481727865363042}
+  states:
+  - {fileID: -450481727865363042}
+  - {fileID: 6009228169915600080}
+  - {fileID: 3147983671579445199}
+--- !u!114 &3147983671579445199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Excited
+  m_EditorClassIdentifier: 
+  guid: 00a0dee93678dec4c93ef5a678fc0fa5
+  graphEditorPosition: {x: 129.27997, y: 264}
+  stateName: Excited
+  description: Little Cube Is Excited and will jump up and down repeatedly
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 6009228169915600080}
+      transitionHandledByAgent: 0
+      transitionConditions:
+      - rid: 124580414315036722
+  references:
+    version: 2
+    RefIds:
+    - rid: 124580414315036722
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: 0f7239cfbb52d304686c4639c05e8f1c, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 0
+--- !u!114 &6009228169915600080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+  guid: 3c95c8ffc861e184aaec03b096bd5774
+  graphEditorPosition: {x: -176, y: 256}
+  stateName: Idle
+  description: Little Cube Will Spin Idly
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 3147983671579445199}
+      transitionHandledByAgent: 0
+      transitionConditions:
+      - rid: 124580414315036721
+  references:
+    version: 2
+    RefIds:
+    - rid: 124580414315036721
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: 0f7239cfbb52d304686c4639c05e8f1c, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 1

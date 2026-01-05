@@ -1,0 +1,592 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4606832374111362892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Go Home
+  m_EditorClassIdentifier: 
+  guid: 8b501db7fe22ae94c87204998fb29e9b
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 754.1992, y: 445.5999}
+  description: Once it is night time the mouse will stop what its doing and go home
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6009394649180047681, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_GoHome, Assembly-CSharp
+        m_MethodName: EnterState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6009394649180047681, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_GoHome, Assembly-CSharp
+        m_MethodName: Behave
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6009394649180047681, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_GoHome, Assembly-CSharp
+        m_MethodName: ExitState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 4393006309510541979}
+      transitionHandleMethod: 3
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438860233408573
+    - stateTo: {fileID: 1762282373340884725}
+      transitionHandleMethod: 1
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438890482204718
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438860233408573
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: dfd762dbd7a4c8f42903595b5991e580, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 1
+    - rid: 2865438890482204718
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: dfd762dbd7a4c8f42903595b5991e580, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 1
+--- !u!114 &-2279259433328822262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Move to start pos
+  m_EditorClassIdentifier: 
+  guid: 30c2bac30f4fe524b8e58cd99dfc32eb
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: -221.39919, y: 222.40002}
+  description: Mouse moves to its start position
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4667200906005756747, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_MoveToStart, Assembly-CSharp
+        m_MethodName: EnterState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 8725419260986054159}
+      transitionHandleMethod: 3
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438808553291954
+    - stateTo: {fileID: -4606832374111362892}
+      transitionHandleMethod: 1
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438813874552836
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438808553291954
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+    - rid: 2865438813874552836
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: dfd762dbd7a4c8f42903595b5991e580, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5b20f59a6eab44490504ee8e1cb69f, type: 3}
+  m_Name: Mouse FSM
+  m_EditorClassIdentifier: 
+  entryState: {fileID: 1664394640218490665}
+  states:
+  - {fileID: 1664394640218490665}
+  - {fileID: -2279259433328822262}
+  - {fileID: 8725419260986054159}
+  - {fileID: 1762282373340884725}
+  - {fileID: 2959968618194908503}
+  - {fileID: -4606832374111362892}
+  - {fileID: 7061588148160156296}
+  - {fileID: 4393006309510541979}
+  - {fileID: 9125793820927511851}
+--- !u!114 &1664394640218490665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b956724ac8457c4e8a00fe78ce44508, type: 3}
+  m_Name: Entry State
+  m_EditorClassIdentifier: 
+  guid: 2a7e1a75bf9d5ed4cb076c9f7b3e2481
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 29.998516, y: 56.101936}
+  description: This state is the entry of the FSM. It has 1 connection and will automatically
+    transition to that connection
+  stateConnection:
+    stateTo: {fileID: 1762282373340884725}
+    transitionHandleMethod: 0
+    SelectedTransitionConditionEvaluator: 0
+    AgentPrefab: {fileID: 0}
+    transitionConditions: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &1762282373340884725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Moving to target
+  m_EditorClassIdentifier: 
+  guid: 9af5e05be0be60442a2b4c1817025c6e
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 88.25371, y: 551.4054}
+  description: mouse pathfinds towards its target
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8141369007410994466, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_MovingToTarget, Assembly-CSharp
+        m_MethodName: EnterState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8141369007410994466, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_MovingToTarget, Assembly-CSharp
+        m_MethodName: Behave
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 2959968618194908503}
+      transitionHandleMethod: 3
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438808553291956
+    - stateTo: {fileID: -4606832374111362892}
+      transitionHandleMethod: 1
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438813874552838
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438808553291956
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+    - rid: 2865438813874552838
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: dfd762dbd7a4c8f42903595b5991e580, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 0
+--- !u!114 &2959968618194908503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Found target
+  m_EditorClassIdentifier: 
+  guid: 45d53a88cb4b8ee44ae8bbb33dc519f9
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 343.209, y: 124.79995}
+  description: Mouse has found its target
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6665911012312135368, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_FoundTarget, Assembly-CSharp
+        m_MethodName: EnterState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: -2279259433328822262}
+      transitionHandleMethod: 3
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438808553292135
+    - stateTo: {fileID: -4606832374111362892}
+      transitionHandleMethod: 1
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438813874552839
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438808553292135
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+    - rid: 2865438813874552839
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: dfd762dbd7a4c8f42903595b5991e580, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 0
+--- !u!114 &4393006309510541979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Go To Sleep
+  m_EditorClassIdentifier: 
+  guid: 800497170cdc1774c93ee7c08a272eba
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 1093.2141, y: 526.4}
+  description: Go To sleep
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4867388603469091615, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_GoToSleep, Assembly-CSharp
+        m_MethodName: EnterState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 7061588148160156296}
+      transitionHandleMethod: 3
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438883579428887
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438883579428887
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+--- !u!114 &7061588148160156296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Sleep
+  m_EditorClassIdentifier: 
+  guid: a29adfe7e85db6741b83a0a231ffec61
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 1101.6002, y: 177.20009}
+  description: Once the mouse is home it will sleep
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8027608511398544145, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_Sleep, Assembly-CSharp
+        m_MethodName: ExitState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 9125793820927511851}
+      transitionHandleMethod: 1
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438813874552842
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438813874552842
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: dfd762dbd7a4c8f42903595b5991e580, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 1
+--- !u!114 &8725419260986054159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Mouse Idle
+  m_EditorClassIdentifier: 
+  guid: 066ec50e5538f344ca08baf17363057b
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: -163.99997, y: 469.59998}
+  description: 'Mouse spins '
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2618682493542632109, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_Idle, Assembly-CSharp
+        m_MethodName: EnterState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2618682493542632109, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+        m_TargetAssemblyTypeName: mouse_Idle, Assembly-CSharp
+        m_MethodName: Behave
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 1762282373340884725}
+      transitionHandleMethod: 2
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 4213985396031288977, guid: d23fe0eca9e12824e8417819ad9f6c59, type: 3}
+      transitionConditions:
+      - rid: 2865438808553291955
+    - stateTo: {fileID: -4606832374111362892}
+      transitionHandleMethod: 1
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438813874552837
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438808553291955
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
+    - rid: 2865438813874552837
+      type: {class: BoolTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 11400000, guid: dfd762dbd7a4c8f42903595b5991e580, type: 2}
+        comparisonOperator: {fileID: 11400000, guid: 40414d3cf4e88384c89e9f471098ef40, type: 2}
+        comparand: 0
+--- !u!114 &9125793820927511851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7562ecde526829a408eaf6ce111ec73d, type: 3}
+  m_Name: Wake Up
+  m_EditorClassIdentifier: 
+  guid: 9803f06518887f443ac7336605cd225d
+  parent: {fileID: 11400000}
+  graphEditorPosition: {x: 785.60016, y: 128.80002}
+  description: Once it is daytime again the mouse should play a wake up animation
+  EnterStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BehaveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitStateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stateConnections:
+    stateConnections:
+    - stateTo: {fileID: 1762282373340884725}
+      transitionHandleMethod: 3
+      SelectedTransitionConditionEvaluator: 0
+      AgentPrefab: {fileID: 0}
+      transitionConditions:
+      - rid: 2865438890482204672
+  references:
+    version: 2
+    RefIds:
+    - rid: 2865438890482204672
+      type: {class: FloatTransitionCondition, ns: , asm: Assembly-CSharp}
+      data:
+        transitionHandledByAgent: 0
+        valueToTest: {fileID: 0}
+        comparisonOperator: {fileID: 0}
+        comparand: 0
